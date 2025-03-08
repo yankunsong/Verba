@@ -1,5 +1,4 @@
 ---
-
 services:
   verba:
     build:
@@ -37,7 +36,7 @@ services:
       - --host
       - 0.0.0.0
       - --port
-      - '8080'
+      - "8080"
       - --scheme
       - http
     image: semitechnologies/weaviate:1.25.10
@@ -57,10 +56,10 @@ services:
       OPENAI_APIKEY: $OPENAI_API_KEY
       COHERE_APIKEY: $COHERE_API_KEY
       QUERY_DEFAULTS_LIMIT: 25
-      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
-      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
-      ENABLE_MODULES: 'e'
-      CLUSTER_HOSTNAME: 'node1'
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "true"
+      PERSISTENCE_DATA_PATH: "/var/lib/weaviate"
+      ENABLE_MODULES: "e"
+      CLUSTER_HOSTNAME: "node1"
     networks:
       - ollama-docker
 
@@ -86,9 +85,6 @@ services:
 volumes:
   weaviate_data: {}
 
-
 networks:
   ollama-docker:
     external: false
-  
-...
